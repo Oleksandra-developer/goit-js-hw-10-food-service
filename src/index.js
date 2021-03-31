@@ -6,4 +6,9 @@ console.log(dishTpl);
 const menuList = document.querySelector('.js-menu');
 menuList.innerHTML = dishTpl(menuData[0]);
 // console.log(menuList);
-// console.log("dish");
+// console.log(createAllDishesCards);
+function createAllDishesCards(menuData) {
+    menuList.innerHTML = menuData.map(dishTpl).join('');
+};
+createAllDishesCards(menuData);
+// menuList.innerHTML = createAllDishesCards;
